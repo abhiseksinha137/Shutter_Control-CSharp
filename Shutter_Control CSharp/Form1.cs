@@ -60,7 +60,7 @@ namespace stageControl_CSharp
         {
             try
             {
-                com = new SerialPort(comboBox1.Text, 9600, Parity.None, 8, StopBits.One);
+                com = new SerialPort(comboBox1.Text, 57600, Parity.None, 8, StopBits.One);
                 com.Open();
                 btnDiscon.Enabled = true;
                 //writeLog("Stage Connected!");
@@ -92,7 +92,7 @@ namespace stageControl_CSharp
             statusChanged = false;
             String command = Shutter_Control_CSharp.Properties.Settings.Default.Open;
             byte[] bytes = System.Text.Encoding.UTF8.GetBytes(command);
-            sendSerial(bytes);
+            sendSerial(command);
             if (statusChanged){
                 shutterStatus = "Open";
                 lblStatus.ForeColor = Color.Red;
@@ -104,7 +104,7 @@ namespace stageControl_CSharp
             statusChanged = false;
             String command = Shutter_Control_CSharp.Properties.Settings.Default.Close;
             byte[] bytes = System.Text.Encoding.UTF8.GetBytes(command);
-            sendSerial(bytes);
+            sendSerial(command);
             if (statusChanged){
                 shutterStatus = "Closed";
                 lblStatus.ForeColor = Color.Green;
