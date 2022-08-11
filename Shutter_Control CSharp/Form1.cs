@@ -137,7 +137,7 @@ namespace stageControl_CSharp
 
         private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-
+            connectCOM();
         }
 
         private void comboBox1_Click(object sender, EventArgs e)
