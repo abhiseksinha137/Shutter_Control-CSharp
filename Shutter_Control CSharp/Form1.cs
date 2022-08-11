@@ -37,6 +37,20 @@ namespace stageControl_CSharp
                 //writeLog(ex.Message);
             }
         }
+
+        private void sendSerial(byte[] command)
+        {
+            try
+            {
+                com.Write(command, 0, command.Length);
+                statusChanged = true;
+            }
+            catch (Exception ex)
+            {
+                statusChanged = false;
+                //writeLog(ex.Message);
+            }
+        }
         //private void writeLog(string log)
         //{
         //    txtbxLog.Text = txtbxLog.Text + log + Environment.NewLine;
@@ -76,7 +90,9 @@ namespace stageControl_CSharp
         private void openShutter()
         {
             statusChanged = false;
-            sendSerial(Shutter_Control_CSharp.Properties.Settings.Default.Open);
+            String command = Shutter_Control_CSharp.Properties.Settings.Default.Open;
+            byte[] bytes = System.Text.Encoding.UTF8.GetBytes(command);
+            sendSerial(bytes);
             if (statusChanged){
                 shutterStatus = "Open";
                 lblStatus.ForeColor = Color.Red;
@@ -86,7 +102,9 @@ namespace stageControl_CSharp
         private void closeShutter()
         {
             statusChanged = false;
-            sendSerial(Shutter_Control_CSharp.Properties.Settings.Default.Close);
+            String command = Shutter_Control_CSharp.Properties.Settings.Default.Close;
+            byte[] bytes = System.Text.Encoding.UTF8.GetBytes(command);
+            sendSerial(bytes);
             if (statusChanged){
                 shutterStatus = "Closed";
                 lblStatus.ForeColor = Color.Green;
@@ -148,6 +166,16 @@ namespace stageControl_CSharp
             {
                 comboBox1.Items.Add(port);
             }
+        }
+
+        private void btnDiscon_Click_1(object sender, EventArgs e)
+        {
+            closeCOM();
+        }
+
+        private void btnOpen_Click(object sender, EventArgs e)
+        {
+            openShutter();
         }
     }
 }

@@ -47,7 +47,7 @@
             // 
             this.pnlIndicator.BackColor = System.Drawing.Color.Gray;
             this.pnlIndicator.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnlIndicator.Location = new System.Drawing.Point(88, 44);
+            this.pnlIndicator.Location = new System.Drawing.Point(96, 10);
             this.pnlIndicator.Name = "pnlIndicator";
             this.pnlIndicator.Size = new System.Drawing.Size(10, 10);
             this.pnlIndicator.TabIndex = 14;
@@ -61,6 +61,7 @@
             this.btnOpen.TabIndex = 15;
             this.btnOpen.Text = "Open";
             this.btnOpen.UseVisualStyleBackColor = true;
+            this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
             this.btnOpen.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnOpen_MouseClick);
             // 
             // label1
@@ -83,6 +84,7 @@
             this.btnDiscon.TabIndex = 10;
             this.btnDiscon.Text = "Disconnect";
             this.btnDiscon.UseVisualStyleBackColor = true;
+            this.btnDiscon.Click += new System.EventHandler(this.btnDiscon_Click_1);
             // 
             // comboBox1
             // 
@@ -100,6 +102,7 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.btnDiscon);
+            this.panel1.Controls.Add(this.pnlIndicator);
             this.panel1.Location = new System.Drawing.Point(1, 20);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(113, 93);
@@ -168,7 +171,6 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnOpen);
-            this.Controls.Add(this.pnlIndicator);
             this.Name = "Form1";
             this.Text = "Shutter Control";
             this.Load += new System.EventHandler(this.Form1_Load);
