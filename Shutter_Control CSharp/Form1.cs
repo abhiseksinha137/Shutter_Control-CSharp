@@ -134,5 +134,20 @@ namespace stageControl_CSharp
             settingsPage page = new settingsPage();
             page.ShowDialog(this);
         }
+
+        private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_Click(object sender, EventArgs e)
+        {
+            string[] ports = SerialPort.GetPortNames();
+            comboBox1.Items.Clear();
+            foreach (string port in ports)
+            {
+                comboBox1.Items.Add(port);
+            }
+        }
     }
 }
