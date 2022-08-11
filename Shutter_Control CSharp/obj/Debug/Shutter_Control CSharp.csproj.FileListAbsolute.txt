@@ -1,0 +1,10 @@
+E:\VB.NEt\Shutter_Control CSharp\Shutter_Control CSharp\bin\Debug\Shutter_Control CSharp.exe.config
+E:\VB.NEt\Shutter_Control CSharp\Shutter_Control CSharp\obj\Debug\Shutter_Control CSharp.csprojResolveAssemblyReference.cache
+E:\VB.NEt\Shutter_Control CSharp\Shutter_Control CSharp\obj\Debug\stageControl_CSharp.Form1.resources
+E:\VB.NEt\Shutter_Control CSharp\Shutter_Control CSharp\obj\Debug\Shutter_Control_CSharp.Properties.Resources.resources
+E:\VB.NEt\Shutter_Control CSharp\Shutter_Control CSharp\obj\Debug\Shutter_Control CSharp.csproj.GenerateResource.Cache
+E:\VB.NEt\Shutter_Control CSharp\Shutter_Control CSharp\bin\Debug\Shutter_Control CSharp.exe
+E:\VB.NEt\Shutter_Control CSharp\Shutter_Control CSharp\bin\Debug\Shutter_Control CSharp.pdb
+E:\VB.NEt\Shutter_Control CSharp\Shutter_Control CSharp\obj\Debug\Shutter_Control CSharp.exe
+E:\VB.NEt\Shutter_Control CSharp\Shutter_Control CSharp\obj\Debug\Shutter_Control CSharp.pdb
+E:\VB.NEt\Shutter_Control CSharp\Shutter_Control CSharp\obj\Debug\Shutter_Control_CSharp.settingsPage.resources
